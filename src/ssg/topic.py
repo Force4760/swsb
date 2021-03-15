@@ -1,5 +1,5 @@
 import os
-import src.ssg.meta as meta
+import meta as meta
 import re
 
 def create_topics(folder):

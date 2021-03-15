@@ -1,6 +1,6 @@
 import os
 import re
-import src.ssg.latest as latest
+import latest 
 
 def index():
     filenames = os.listdir("src/pages")

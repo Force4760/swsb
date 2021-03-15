@@ -1,8 +1,8 @@
-import src.ssg.topic as topic
-import src.ssg.index as index
-import src.ssg.posts as posts
+import topic 
+import index 
+import posts 
 import os
-import src.ssg.functions as functions
+import functions 
 from subprocess import call
 
 functions.rm("build")

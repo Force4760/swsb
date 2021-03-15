@@ -1,6 +1,6 @@
 import os
 import re
-import src.ssg.meta as meta
+import meta
 
 def get_files(dirName):
     # create a list of file and sub directories 

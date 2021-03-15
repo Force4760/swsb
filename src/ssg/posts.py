@@ -1,7 +1,7 @@
 import os
-import src.ssg.parser as parser
+import parser 
 import re
-import src.ssg.functions as functions
+import functions 
 
 def make_posts():
     topics = [ f.path for f in os.scandir("src/pages") if f.is_dir() ]
