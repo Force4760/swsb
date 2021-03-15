@@ -1,6 +1,6 @@
 import markdown
 import re
-import meta
+import src.ssg.meta as meta
 
 def parser(md, file):
     g = meta.get_meta(file)
