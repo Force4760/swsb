@@ -1,0 +1,111 @@
+* { 
+  box-sizing: border-box;
+}
+  
+body {
+  margin: 0px;
+  font-family: 'Ubuntu';
+  background-color: #000000;
+  
+  
+}
+body::after{
+  content: "";
+  background: url("../images/download.jpeg") center center / cover no-repeat fixed;
+  filter: blur(1.1px);
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: fixed;
+  
+  z-index: -3;  
+}
+body::after{
+  content: "";
+  background-color: #000000;
+  
+  opacity: 0.5;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: fixed;
+  
+  z-index: -2;  
+}
+
+.container-full{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  
+  width: 100%;
+  height: calc(100vh - 50px);
+  max-width: 1200px;
+  margin: auto;
+}
+
+.container-full div{
+text-align: center;
+width:100%;
+}
+
+.container-full div p{
+margin-top: -2rem;
+font-size: 1rem;
+color: #ffffff;
+}
+
+.container-full p{
+  color: #ffffff;
+  font-size: 32px;
+  text-shadow: 0px 2px 5px rgba(0,0,0,1);
+}
+
+section{
+  max-width: 90%;
+  padding: 2rem;
+  margin: auto;
+  color: #a3a6b0;
+  text-shadow: 0px 4px 3px rgba(0,0,0,1);
+  background-color: rgba(0,0,0,0.5);
+  border-radius: 20px;
+  margin-bottom: 4rem;
+  position: relative;
+}
+
+.bg-img{
+  opacity: 1;
+  border-radius: 20px;
+  z-index: -1;
+  top:0; 
+  left: 0;
+  position:absolute; 
+  width: 100%; 
+  height: 100%;
+  
+}
+
+
+h1{
+  width: 100vw;
+  max-width: 90%;
+  color: #a3a6b0;
+  text-shadow: 0px 4px 3px rgba(0,0,0,1);
+  padding: 2rem;
+  margin: auto;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+}
+
+a{
+  text-decoration: none;
+  color: inherit;
+
+}
+a:hover{
+  text-decoration: underline;
+  text-shadow: 0px 0px 0px rgba(0,0,0,1);
+}
