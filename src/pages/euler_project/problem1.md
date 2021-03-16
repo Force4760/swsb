@@ -25,11 +25,10 @@ Since PE allows it's solvers to explain and discuss it's first 100 problems outs
 ## Let's Start
 **Multiples of 3 and 5**
 
-```
-**If we list all the natural numbers below 10 that are multiples of 3 or 5, we get 3, 5, 6 and 9. The sum of these multiples is 23.**
+>If we list all the natural numbers below 10 that are multiples of 3 or 5, we get 3, 5, 6 and 9. The sum of these multiples is 23.
 
-**Find the sum of all the multiples of 3 or 5 below 1000.**
-```
+>Find the sum of all the multiples of 3 or 5 below 1000.
+
 
 This is the prompt for the first problem. If this feels simple, don’t let discouragement choke you, because this will be getting more complex soon. If you find this too hard, relax. Math is hard, but easy problems are not fun, the feeling when you solve something difficult is astonishing.
 

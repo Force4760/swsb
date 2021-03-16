@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Even Fibonacci Numbers</title>
+    <link rel="stylesheet" href="../../css/nav.css">
+    
+    <link rel="stylesheet" href="../../css/post.css">
+</head>
+<body>
+    <div class="nav">
+        <div class="nav-container">
+          <input type="checkbox" id="nav-check">
+          <div class="nav-header">
+            <a href="../../index.html" class="nav-title">
+              FORCE
+            </a>
+          </div>
+          <div class="nav-btn">
+            <label for="nav-check">
+              <span></span>
+              <span></span>
+              <span></span>
+            </label>
+          </div>
+          
+          <div class="nav-links">
+            <a href="https://github.com/Force4760" target="_blank">GitHub</a>
+            <a href="https://soundcloud.com/g-force-beats" target="_blank">SoundCloud</a>
+            <a href="https://www.instagram.com/force_4760/" target="_blank">Instagram</a>
+            <a href="https://www.youtube.com/channel/UCBK6ert0TLOT6k-D951bb8g/videos" target="_blank">YouTube</a>
+          </div>
+        </div>
+          
+        </div>
+        <header>
+            <h1>Even Fibonacci Numbers</h1>
+    
+            <h2>By:&nbsp;   Force&nbsp; &nbsp;  -&nbsp; &nbsp;  15/3/21</h2>
+            
+        </header>
+    
+    <div class="post">
+        <p>Hi again everyone!</p>
+<p>This is my second post, and I will be continuing to work on the euler project.</p>
+<p>Today I will be solving the 2nd problem called <a href="https://projecteuler.net/problem=2">Even Fibonacci Numbers</a>.</p>
+<h2>Fibonacci</h2>
+<p>As the title suggests, we will be working with the <em>Fibonacci sequence</em>, which is just <strong>Beautifull</strong>. This sequence consists of numbers that follow a simple rule: <strong>Each one is the sum of the two that come before it</strong>.</p>
+<p>It can be seen in nature in various ways, generating amazing and mesmerizing patterns like this ones: <img alt="fibonnaci" src="https://leerzelfbeleggen.com/wp-content/uploads/2018/08/Fibonacci-trading-leren-traden-met-de-geheime-formule-voorbeelden.jpeg" /></p>
+<p>This Sequence was first described by <em>Leonardo Fibonacci</em>, a famous mathematician from the 12th century. He used this to describe the growth of a group of rabbits for a problem that intended to teach people how to use <strong>Arabic numbers</strong> (the ones we use today like 1, 2, 3 ...) since they had been introduced to Europeans dhortly before.</p>
+<h2>The Problem</h2>
+<p>The question starts by introducing us to the concept of the Fibonacci sequence, but the real question is:</p>
+<blockquote>
+<p>By considering the terms in the Fibonacci sequence whose values do not exceed four million, find the sum of the even-valued terms.</p>
+</blockquote>
+<p>Let's start dissectingg it, shall we?</p>
+<p>To make things easier, we can start by creating a list that holds three values:<br />
+- The <strong>oldest</strong> number at <strong>index 0</strong><br />
+- The <strong>previous</strong> number at <strong>index 1</strong><br />
+- The <strong>new</strong> number at <strong>index 2</strong></p>
+<div class="codehilite"><pre><span></span><code><span class="c1"># old - previous - new</span>
+<span class="n">num</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+</code></pre></div>
+
+<p>Since we already placed 2 and 2 is an <strong>even</strong> number, our <strong>sum</strong> variable should be initialized with the value <em>2</em>:</p>
+<div class="codehilite"><pre><span></span><code><span class="nb">sum</span> <span class="o">=</span> <span class="mi">2</span>
+</code></pre></div>
+
+<p>We are then asked to consider numbers bellow <strong>four million</strong>, so we can use a <em>while loop</em> that breaks when we reach that number, and since the current number is stored at <strong>num[2]</strong>:</p>
+<div class="codehilite"><pre><span></span><code><span class="k">while</span> <span class="n">num</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">&lt;</span> <span class="mi">4000000</span><span class="p">:</span>
+    <span class="c1"># do logic</span>
+</code></pre></div>
+
+<p>As far as the internal logic goes, we need to add two things:<br />
+- A way to continue the sequence<br />
+- A way to check if the number is <strong>even</strong> and add it to the <strong>sum</strong> variable.</p>
+<p>The sequence can be continued by adding the two <strong>previous</strong> numbers, replacing the <strong>new</strong> with their sum and shifting their positioning like this:</p>
+<div class="codehilite"><pre><span></span><code><span class="c1"># add oldest and previous</span>
+<span class="n">num</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="n">num</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="n">num</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+<span class="c1"># shift positioning</span>
+<span class="n">num</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">num</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+<span class="n">num</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">num</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
+</code></pre></div>
+
+<p>Now that the first problem is covered, we need to work on the second one. Python (and most modern/high level programming languages) facilitates this by giving us access to the <strong>%</strong> operator. This operator allows us to get the rest from a quotient between two numbers. Let's do a quick recap on elementary math.</p>
+<p>A division can be seen as a sequence of subtractions, so <strong>4/2</strong> can be seen as:<br />
+- 4 - 2 = 2<br />
+- (4 - 2) - 2 = 2 - 2 = 0<br />
+- so 4/2 = 2</p>
+<p>If we try to do <strong>5/2</strong> we can:<br />
+- 5 - 2 = 3<br />
+- (5 - 2) - 2 = 3 - 2 = 1<br />
+- so 5/2 = 2*2 + 1 (the rest)</p>
+<p>If a number is a multiple of another it's rest will be equal to <strong>0</strong>. So by checking that we get if a number is even (multiple of 2) or odd. And add it to the sum</p>
+<div class="codehilite"><pre><span></span><code><span class="k">if</span> <span class="n">num</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="nb">sum</span> <span class="o">+=</span> <span class="n">num</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
+</code></pre></div>
+
+<p>Alternatively we can do this:</p>
+<div class="codehilite"><pre><span></span><code><span class="k">if</span> <span class="nb">int</span><span class="p">(</span><span class="n">num</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span> <span class="o">==</span> <span class="n">num</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">/</span><span class="mi">2</span><span class="p">:</span>
+    <span class="nb">sum</span> <span class="o">+=</span> <span class="n">num</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
+</code></pre></div>
+
+<p>Now that we have every part created we just need to join them and print the result.</p>
+<div class="codehilite"><pre><span></span><code><span class="n">num</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+<span class="nb">sum</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="k">while</span> <span class="n">num</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">&lt;</span> <span class="mi">4000000</span><span class="p">:</span>
+    <span class="n">num</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="n">num</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="n">num</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+    <span class="n">num</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">num</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+    <span class="n">num</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">num</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
+    <span class="k">if</span> <span class="n">num</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="nb">sum</span> <span class="o">+=</span> <span class="n">num</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="nb">sum</span><span class="p">)</span>
+</code></pre></div>
+
+<p>This 2nd problem was a lot of fun (even if it was simple), because I <strong>love</strong> sequences (especially this one)</p>
+<p>I hope that you also had fun and learned something new. I will be releasing a new post soon, but until then <strong>Ask Questions</strong>.</p>
+    </div>
+</body>
+</html>
