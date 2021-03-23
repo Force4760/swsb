@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Largest Prime Factor</title>
+    <link rel="stylesheet" href="../../css/nav.css">
+    
+    <link rel="stylesheet" href="../../css/post.css">
+</head>
+<body>
+    <div class="nav">
+        <div class="nav-container">
+          <input type="checkbox" id="nav-check">
+          <div class="nav-header">
+            <a href="../../index.html" class="nav-title">
+              FORCE
+            </a>
+          </div>
+          <div class="nav-btn">
+            <label for="nav-check">
+              <span></span>
+              <span></span>
+              <span></span>
+            </label>
+          </div>
+          
+          <div class="nav-links">
+            <a href="https://github.com/Force4760" target="_blank">GitHub</a>
+            <a href="https://soundcloud.com/g-force-beats" target="_blank">SoundCloud</a>
+            <a href="https://www.instagram.com/force_4760/" target="_blank">Instagram</a>
+            <a href="https://www.youtube.com/channel/UCBK6ert0TLOT6k-D951bb8g/videos" target="_blank">YouTube</a>
+          </div>
+        </div>
+          
+        </div>
+        <header>
+            <h1>Largest Prime Factor</h1>
+    
+            <h2>By:&nbsp;   Force&nbsp; &nbsp;  -&nbsp; &nbsp;  21/3/21</h2>
+            
+        </header>
+    
+    <div class="post">
+        <p>Hey people! </p>
+<p>I'm back with our series on <strong>PE</strong>.</p>
+<p>Last time we took a look at one of my favourite pieces of math when I was youger, and today we will look at <strong>prime numbers</strong> and <strong>prime factore</strong>.</p>
+<h2>What are prime numbers?</h2>
+<p>Prime numbers are a complex and a bit misterious topic, they have some amazing properties (like being able to express every even positive number as a sum of two prime numbers). Simply put a Prime Number is:</p>
+<blockquote>
+<p>A number whose only factors are 1 and the number itself</p>
+</blockquote>
+<h2>Factoring</h2>
+<p>The factors of a number are the numbers that can be multiplied to give that first number. So the <strong>Prime Factors</strong> of a number are the <strong>Prime numbers</strong> that can be multiplied to give us the first number.</p>
+<table>
+<thead>
+<tr>
+<th align="center">Numbers</th>
+<th align="center">Factors</th>
+<th align="center">Nº of Factors</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">1</td>
+<td align="center">1</td>
+<td align="center">1</td>
+</tr>
+<tr>
+<td align="center">2</td>
+<td align="center">1,2</td>
+<td align="center">2</td>
+</tr>
+<tr>
+<td align="center">3</td>
+<td align="center">1,3</td>
+<td align="center">2</td>
+</tr>
+<tr>
+<td align="center">4</td>
+<td align="center">1,2,4</td>
+<td align="center">3</td>
+</tr>
+<tr>
+<td align="center">5</td>
+<td align="center">1,5</td>
+<td align="center">2</td>
+</tr>
+<tr>
+<td align="center">6</td>
+<td align="center">1,2,3,6</td>
+<td align="center">4</td>
+</tr>
+<tr>
+<td align="center">7</td>
+<td align="center">1,7</td>
+<td align="center">2</td>
+</tr>
+<tr>
+<td align="center">8</td>
+<td align="center">1,2,4,8</td>
+<td align="center">4</td>
+</tr>
+<tr>
+<td align="center">9</td>
+<td align="center">1,3,9</td>
+<td align="center">3</td>
+</tr>
+<tr>
+<td align="center">10</td>
+<td align="center">1,2,5,10</td>
+<td align="center">4</td>
+</tr>
+</tbody>
+</table>
+<p>As we can see the prime numbers bellow 10 are <strong>2,3,5,7</strong> and they all have 2 factors.</p>
+<p>For prime factoring a number we basically just divide the number by the lowest prime until we can't divide it more with that number and repeat this process until we get a prime number (so that we divide it by itself and get 1) as seen in the picture bellow.<br />
+<img alt="fibonnaci" src="./assets/e3.png" /></p>
+<h2>The problem</h2>
+<blockquote>
+<p>What is the largest prime factor of the number 600851475143 ?</p>
+</blockquote>
+<h2>The Program</h2>
+<p>We will start by defining the number we want to check for the largest prime assigning it to the <strong>n</strong> variable and assigning 0 to a <strong>max</strong> variable.</p>
+<div class="codehilite"><pre><span></span><code><span class="nb">max</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">n</span> <span class="o">=</span> <span class="mi">600851475143</span>
+</code></pre></div>
+
+<p>As we saw before all <strong>primes</strong> are larger or equal to 2 (1 doesn't really count as a prime) we can just check numbers from 2 up to <strong>n</strong>.</p>
+<p>A non prime number can be factored into the product of two factors, so none of them can be larger than the <strong>square root of the original number</strong>, as that would make the product give a number higher than the  original one we can shallow our interval from 2 up to n to <strong>2 up to sqrt(n)+1</strong> (as the range function does not include the higher number)</p>
+<div class="codehilite"><pre><span></span><code><span class="c1"># to get the sqrt function</span>
+<span class="kn">import</span> <span class="nn">math</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="nb">int</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">n</span><span class="p">))</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span>
+    <span class="c1"># do something</span>
+</code></pre></div>
+
+<p>Since all <strong>non-prime numbers</strong> can be expressed as a multiplication of two or more primes (ie 4=2x2, 20=5x4=5x2x2,...) we need to use a while loop and see if the original number is divisible by that one:</p>
+<div class="codehilite"><pre><span></span><code><span class="k">while</span> <span class="n">n</span> <span class="o">%</span> <span class="n">i</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="n">n</span> <span class="o">=</span> <span class="n">n</span> <span class="o">/</span> <span class="n">i</span>
+</code></pre></div>
+
+<p>Then we check if <strong>i</strong> is larger than <strong>max</strong></p>
+<div class="codehilite"><pre><span></span><code><span class="k">while</span> <span class="n">n</span> <span class="o">%</span> <span class="n">i</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="n">n</span> <span class="o">=</span> <span class="n">n</span> <span class="o">/</span> <span class="n">i</span>
+    <span class="k">if</span> <span class="n">i</span> <span class="o">&gt;</span> <span class="nb">max</span><span class="p">:</span>
+        <span class="nb">max</span> <span class="o">=</span> <span class="n">i</span>
+</code></pre></div>
+
+<p>To end this problem we just need to print the max value and <em>Voila</em> here you have the final program.</p>
+<div class="codehilite"><pre><span></span><code><span class="kn">import</span> <span class="nn">math</span>
+
+<span class="n">n</span> <span class="o">=</span> <span class="mi">600</span>
+<span class="nb">max</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="nb">int</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">n</span><span class="p">))):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;----&quot;</span><span class="p">,</span> <span class="p">)</span>
+    <span class="k">while</span> <span class="n">n</span> <span class="o">%</span> <span class="n">i</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="n">n</span> <span class="o">=</span> <span class="n">n</span> <span class="o">/</span> <span class="n">i</span>
+        <span class="k">if</span> <span class="n">i</span> <span class="o">&gt;</span> <span class="nb">max</span><span class="p">:</span>
+            <span class="nb">max</span> <span class="o">=</span> <span class="n">i</span>
+
+
+<span class="nb">print</span><span class="p">(</span><span class="nb">max</span><span class="p">)</span>
+</code></pre></div>
+
+<p>As always I hope you liked this write up. More complex problems are yet to come, but until then <strong>Ask Questions</strong>.</p>
+    </div>
+</body>
+</html>

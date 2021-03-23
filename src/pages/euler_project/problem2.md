@@ -4,7 +4,7 @@ Date: 15/3/21
 Overview: The second challenge from the Project Euler makes us dive into the wonders of the Fibonacci number and the golden ratio.
 Image: ''
 
-Hi again everyone!
+Hi again everyone! 
 
 This is my second post, and I will be continuing to work on the euler project.
 

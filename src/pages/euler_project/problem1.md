@@ -73,10 +73,10 @@ We can deduce from this that if a number is a multiple of another, the result of
 
 ```python
 # if i is multiple of 5
-if i % 5 == 0: 
+if i % 5 == 0:
     sum += i
 # if i is multiple of 3 but not 5
-elif i % 3 == 0: 
+elif i % 3 == 0:
     sum += i
 ```
 
