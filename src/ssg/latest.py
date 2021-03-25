@@ -26,15 +26,12 @@ def latest(dirName):
     files = get_files(dirName)
     real_files=[]
     for f in files:
-        print(f)
         if f[-3:] != ".md":
             files.remove(f)
-    print(files)
 
     latest_file = max(files, key=os.path.getctime)
     me = meta.get_meta(latest_file)
-    print(latest_file)
     latest_file=latest_file.replace("src/pages", "pages")
     latest_file=latest_file.replace(".md", ".html")
-    print(latest_file)
+
     return [latest_file, me]
