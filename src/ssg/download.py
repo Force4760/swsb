@@ -18,10 +18,15 @@ def download_one(link,name, downloads, msg = ""):
         print("Connection Error!")
     try:
         print("Downloading...", msg)
-        v = yt.streams.filter(only_audio=True)
-        v[0].download(downloads, filename = name)
-        os.rename(os.path.join(downloads, name)+".mp4",os.path.join(downloads, name)+".mp3")
-        print("Download completed!")
+        
+        if not os.path.isfile(os.path.join(downloads, name)+".mp3"):
+            v = yt.streams.filter(only_audio=True)
+            v[0].download(downloads, filename = name)
+            os.rename(os.path.join(downloads, name)+".mp4",os.path.join(downloads, name)+".mp3")
+            print("Download completed!")
+        else:
+            print("Already Downloaded!")
+        
     except:
         print("Error!")
 
@@ -31,7 +36,6 @@ def get_songs(file):
     return re.findall(r"\[(.*)\]\((.*)\)", text)
 
 def download(file, downloads, name):
-    os.system('clear')
     name = rename(name)
     songs = get_songs(file)
     downloads = os.path.join(downloads, name)
@@ -45,4 +49,8 @@ def download(file, downloads, name):
 
 
 if __name__ == "__main__":
-    download("src/pages/playlist/march21.md", downloads, "old")
+    os.system('clear')
+    name = input("Name: ")
+    file = input("File (src/pages/.../...): ")
+    file = os.path.join("src/pages", file)
+    download(file, downloads, name)
