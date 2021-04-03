@@ -59,3 +59,4 @@ Estas leis foram revolucionárias na época, acabando com a suposição de que a
 
 As Leis de Kepler descrevem o movimento descrito pelos planetas, mas não explicam as forças que o causam, sendo que isso só seria explicado através da **Gravidade**
 
+Próximo: [Lei da Gravitação Universal](./newton.html)

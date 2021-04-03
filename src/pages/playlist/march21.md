@@ -1,7 +1,7 @@
-Title: Playlist Março 21
+Title: Playlist Oldschool
 Author: Force
 Date: 34/3/21
-Overview: (Português) Playlist de Rap luso 31 dias 31 músicas
+Overview: (Português) Playlist de Rap oldschool
 Image: ''
 
 Este mês, como primeira playlist, decidi voltar às origens e fazer uma playlist de rap Old School.

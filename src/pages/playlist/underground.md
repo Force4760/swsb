@@ -16,7 +16,7 @@ Underground is a **State of mind**.
 3. [ORTEUM X Sensei D - SNIPER](https://www.youtube.com/watch?v=JwoJE8BGtA8)
     
 
-4. [Baskiat X Chapz - Jar Da](https://www.youtube.com/watch?v=tDWFdOfScjQ)
+4. [Baskiat X Chapz - Jar Da](https://www.youtube.com/watch?v=ctDn58ylAPs)
     
 
 5. [Chapz - A Vida de um Amigo](https://www.youtube.com/watch?v=WUMVY9bvnHw)
@@ -43,13 +43,13 @@ Underground is a **State of mind**.
 12. [TNT X Blasph - Foder o Rap](https://www.youtube.com/watch?v=0xfab8fPHKQ)
   
     
-13. [Big Jony - Ascensão](https://www.youtube.com/watch?v=Xo0ZX5t6Q_A)
+13. [Big Jony - Ascensão](https://www.youtube.com/watch?v=q6lXt5ToU1g)
 
     
 14. [Uno - Nada De Novo](https://www.youtube.com/watch?v=E_aix-EumVs)
 
     
-15. [João Tamura X Beiro X Xtinto X Pedra - Palavras](https://www.youtube.com/watch?v=1o78fOmSF0Q&t=86s)
+15. [João Tamura X Beiro X Xtinto X Pedra - Palavras](https://www.youtube.com/watch?v=jAzyE96S7WU)
 
     
 16. [TOM - O que é que a vida traz](https://www.youtube.com/watch?v=nlSDTDsMqBk)
@@ -67,7 +67,7 @@ Underground is a **State of mind**.
 20. [Each1 - Mal-me-quer](https://www.youtube.com/watch?v=sOmCwGmOuV0)
 
     
-21. [Chek1 X DJ Crava - Ainda não é tarde](https://www.youtube.com/watch?v=3sJ0GzGviek)
+21. [Chek1 X DJ Crava - Ainda não é tarde](https://www.youtube.com/watch?v=5Jh4PMVzG-I)
 
     
 22. [Enigmacru - Poço](https://www.youtube.com/watch?v=ekk6oq9Pujc)
@@ -106,7 +106,7 @@ Underground is a **State of mind**.
 33. [Minus - Juntos ao Luar](https://www.youtube.com/watch?v=RXxwcEWL-P4)
 
 
-34. [Escalpe - SÍNDROME DE PROTEUS](https://www.youtube.com/watch?v=0uwjgSnOkYY)
+34. [Escalpe - THOMASIN](https://www.youtube.com/watch?v=wK9sk9173y8)
 
 
 35. [SCORP - SÓ QUERO](https://www.youtube.com/watch?v=Oxn83YrAgvk)
@@ -122,7 +122,7 @@ Underground is a **State of mind**.
 
 40. [DANNY THE DAWG - HOSTIL](https://www.youtube.com/watch?v=ICtiAlv4Vuc)
 
-41. [HipnoD X Charlie Beats](https://www.youtube.com/watch?v=1z1aah35Fwc)
+41. [HipnoD X Charlie Beats - Forasteiro](https://www.youtube.com/watch?v=1z1aah35Fwc)
 
 42. [L-ALI - CHIPA-ME O ENCEFALO](https://www.youtube.com/watch?v=3fgfrNP-yfE)
 
